@@ -22,6 +22,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 # 后台管理系统初始化设置
 
+```bash
 > 生产环境的依赖: cnpm i -S axios vuex element-ui qs animate.css echarts normalize.css
 > 开发环境的依赖: cnpm i -D less less-loader
 
@@ -51,3 +52,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 > ---------styles 公共样式文件夹
 > ---------utils 公用 js 文件夹
 > ---views 业务界面文件夹
+```

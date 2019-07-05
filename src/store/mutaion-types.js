@@ -1,0 +1,1 @@
+export const RECEIVE_LOGIN_INFO = 'receive_login_info'; // 接收登录用户信息

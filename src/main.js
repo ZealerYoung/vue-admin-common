@@ -1,8 +1,8 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import Vue from 'vue';
+import App from './App';
+import router from './router';
 
 /**
  * 1.elemetui配置
@@ -10,13 +10,14 @@ import router from './router'
 import Element from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(Element, {
-    size: 'small'
+    size: 'small',
 });
 
 /**
- * 2.国际化配置
+ * 2.后台地址
  */
-import i18n from './i18n/i18n';
+import httpUrl from '@/api/httpUrl.js';
+Vue.prototype.$httpUrl = httpUrl;
 
 /**
  * 3.重置浏览器样式,自定义公用样式
@@ -33,24 +34,23 @@ Vue.use(animate);
 /**
  * 5.引入axios
  */
-import axios from 'axios'
-Vue.prototype.$axios = axios
+import axios from 'axios';
+Vue.prototype.$axios = axios;
 
 /**
  * 6.引入vuex
  */
-import store from './store';
+// import store from './store';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,
-    store,
-    i18n,
+    // store,
     components: {
-        App
+        App,
     },
-    template: '<App/>'
-})
+    template: '<App/>',
+});

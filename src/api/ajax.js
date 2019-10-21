@@ -1,11 +1,7 @@
-/**
- * 请求封装
- */
 import axios from 'axios';
 const qs = require('qs');
 export default function ajax(url, data = {}, type = 'get') {
-    let uploadData,
-        formData = new FormData();
+    let uploadData, formData = new FormData();
     switch (type) {
         case 'get':
             uploadData = '?' + qs.stringify(data);
@@ -27,7 +23,7 @@ export default function ajax(url, data = {}, type = 'get') {
 
     return new Promise((reslove, reject) => {
         axios({
-                method: type == 'form' ? type = 'post' : type = type,
+                method: type == 'form' ? (type = 'post') : (type = type),
                 url,
 
                 data: uploadData,
